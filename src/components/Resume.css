@@ -1,0 +1,43 @@
+.webLink {
+  transition: transform 0.3s ease-in-out;
+}
+
+.webLink:hover {
+  transform: scale(1.02);
+}
+
+.webLink {
+  transition: transform 0.5s ease-in-out;
+  display: block;
+  opacity: 1;
+}
+
+.toLeft {
+  animation: slideInLeft 0.5s forwards;
+}
+
+.toRight {
+  animation: slideInRight 0.5s forwards;
+}
+
+@keyframes slideInLeft {
+  from {
+    transform: translateX(50%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}

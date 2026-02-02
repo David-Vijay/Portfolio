@@ -1,0 +1,121 @@
+.navList:hover{
+    color:rgb(64, 235, 52);
+    cursor: pointer;
+}
+.navList{
+    transition: 'color 0.3s ease';
+    font-weight: bold;
+}
+@keyframes slideRight {
+    from{
+        opacity: 0;
+        transform: translate(-100px);
+    }
+    to{
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+@keyframes slideLeft {
+    from{
+        opacity: 0;
+        transform: translate(100px);
+    }
+    to{
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+.slide-left{
+    animation: slideRight 0.8s ease forwards;
+}
+.slide-right{
+    animation: slideLeft 0.8s ease forwards;
+}
+
+/* Hero section */
+.spinner-container {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    display: flex;
+    padding:20px;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .static-image-with-rotating-border {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%; /* Circular border */
+    overflow: hidden; 
+    
+  }
+  
+  .static-image-with-rotating-border::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 4px solid transparent;
+    border-top-color: rgb(64, 235, 52); 
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    z-index: 2; 
+  }
+  
+  .static-image-with-rotating-border img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    position: relative;
+    z-index: 1; 
+  }
+  
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+.downloadBtn{
+  background-color: rgb(64, 235, 52);
+  padding:10px;
+  border:none;
+  border-radius: 20px;
+  padding-right: 20px;
+  padding-left: 20px;
+  color:black;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+.downloadLink{
+  display: flex;
+  justify-content: flex-start;
+  width: fit-content;
+  text-decoration: none;
+  margin: 0;
+}
+
+.downloadBtn:active{
+  transform: scale(1.2);
+}
+
+@keyframes slideUp {
+  from{
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to{
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
